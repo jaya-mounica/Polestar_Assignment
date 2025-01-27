@@ -1,0 +1,17 @@
+{
+  "name": "pw-bdd-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js test src/tests/feature/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.49.1",
+    "ts-node": "^10.9.2"
+  }
+}
