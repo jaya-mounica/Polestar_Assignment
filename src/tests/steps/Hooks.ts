@@ -8,7 +8,7 @@ let page: Page
 let browser: Browser
 
 Before(async function() {
-    browser = await chromium.launch({ headless: false });
+    browser = await chromium.launch({ headless: true });
     page = await browser.newPage();
     pagefixture.page = page;
     pagefixture.verifypolestarmenu = new checkingmenuPage(pagefixture.page);
