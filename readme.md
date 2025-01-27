@@ -19,7 +19,6 @@ test-results -> Contains all the reports related file
 - Default Cucumber report
 - Logs
 - Screenshots of failure
-- Trace of failure
 
 Get Started
 Setup:
