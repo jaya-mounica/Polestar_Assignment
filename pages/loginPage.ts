@@ -27,7 +27,7 @@ class loginPage extends playwrightWrapper{
             this.email = this.page.locator("//input[@id='email-username-field']")
             this.password = this.page.locator("//input[@id='password-field']")
             this.loginbutton = this.page.locator("//button[@id='login-btn']")
-            this.errorValidation = this.page.locator("//div[@id='errorSection']")
+            this.errorValidation = this.page.locator("//div[@id='errorSection']/kiyt")
         }
     
     

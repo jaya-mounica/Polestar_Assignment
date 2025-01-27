@@ -1,4 +1,4 @@
-import { Before, After } from "@cucumber/cucumber";
+import { Before, After, Status } from "@cucumber/cucumber";
 import { Browser, chromium, Page } from "@playwright/test";
 import { pagefixture } from "./Pagefixture";
 import checkingmenuPage from "../../../pages/checkingmenuPage";
@@ -16,8 +16,13 @@ Before(async function() {
     
 });
 
-After(async function () {
-   await  pagefixture.page.close();
+After(async function ({pickle,result}) {
+   if(result.status==Status.FAILED){
+const timestamp = new Date().toISOString().replace(/[:.-]/g, '_')  
+  const image= await pagefixture.page.screenshot({path:`./results/failed-screenshots/${pickle.name}-${timestamp}`, type:"png"});
+     await this.attach(image,"img/png")
+   }
+    await  pagefixture.page.close();
 await browser.close();
     
 });

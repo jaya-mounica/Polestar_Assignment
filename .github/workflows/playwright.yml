@@ -22,5 +22,6 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: playwright-report
-        path: results/
+        path: results/ 
         retention-days: 30
+      if: always()
